@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftControl))
         {
+            speedRun = 15.0f;
             _currentSpeed = speedRun;
             animator.speed = 2;
         }
@@ -42,22 +43,25 @@ public class Player : MonoBehaviour
             animator.speed = 1;
         }
 
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
+
             animator.SetBool(triggerRun, true);
             myRigibody.velocity = new Vector2(-_currentSpeed, myRigibody.velocity.y);
-            if(myRigibody.transform.localScale.x != -1)
+            if (myRigibody.transform.localScale.x != -1)
             {
-                myRigibody.transform.DOScaleX(-1,swipeDuration);
+                myRigibody.transform.DOScaleX(-1, swipeDuration);
             }
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
+        
             animator.SetBool(triggerRun, true);
             myRigibody.velocity = new Vector2(_currentSpeed, myRigibody.velocity.y);
-            if(myRigibody.transform.localScale.x != -1)
+            if (myRigibody.transform.localScale.x != -1)
             {
-                myRigibody.transform.DOScaleX(1,swipeDuration);
+                myRigibody.transform.DOScaleX(1, swipeDuration);
             }
         }
         else

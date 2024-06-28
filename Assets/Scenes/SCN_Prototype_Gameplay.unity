@@ -428,7 +428,7 @@ MonoBehaviour:
   myRigibody: {fileID: 541623674}
   friction: {x: 0.16, y: 0}
   speed: 10
-  speedRun: 0
+  speedRun: 3.13
   forceJump: 10
   ease: 27
   JumpScaleY: 1.5
